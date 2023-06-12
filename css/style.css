@@ -1,0 +1,93 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.body{
+    height:100vh;
+    background-color: rgb(242, 242, 242);
+}
+.header{
+    height:300px;
+    width:100%vh;
+    background-image: url(./disney-world.jpg);
+    background-position:center;
+    background-size:contain;
+    }
+
+.form{
+    height:70px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    bottom:30px;
+    gap:10px;
+}
+.name{
+    height:25px;
+    width:100%;
+    border:solid blue 2px;
+}
+.search{
+height: 25px;
+width:60px;
+background-color: rgb(35, 60, 254);
+border:none;
+color :white;
+}
+
+.main{
+    border-left: solid black;
+    border-right:solid  black;
+    height: 72.5vh;
+}
+.characters-box{
+    display:flex;
+    justify-content: space-between;
+    padding : 10% 5% 0% 5%
+}
+.card {
+    border :solid grey;
+    background-color: white;
+    height:300px;
+    width:230px;
+}
+.titles{
+    padding-bottom:10%;
+    color:blue;
+}
+
+
+.footer{
+    height:min-content;
+    text-align: center;
+    background-color: blue;
+    color:white;
+    position:relative;
+}
+
+.favs-list{
+    list-style: none;
+}
+.characters-list{
+    list-style: none;
+}
+
+.imagen{
+    background-image: '';
+}
+.number{
+    display:none;
+}
+
+.photo{
+    
+    width: 150px;
+}
