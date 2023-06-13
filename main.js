@@ -34,11 +34,13 @@ function handleClick(event) {
   //const selectedPalette = charactersList.find((item) => id === id);
   //const indexPalette = charactersList.findIndex((item) => id === id);
   if (isFavorite === false) {
-    favStorage.push(id);
+    favStorage.push(id) && charactersList.classList.add ('yellow');
 
+    
   } else {
     const index = favStorage.indexOf(id);
-    favStorage.splice(index, 1);
+    favStorage.splice(index, 1) && charactersList.classList.remove ('yellow');
+  
   }
   console.log(favStorage);
   localStorage.setItem('favorites', JSON.stringify(favStorage));
@@ -50,10 +52,10 @@ function renderList(list){
   favs.innerHTML=``;
   list.forEach(element => {
     
-    charactersList.innerHTML+= `<li id="card${element._id}" class="cardLi"> <p> ${element.name}</p> <img class="photo" src=" ${element.imageUrl}"/></li> `;
+    charactersList.innerHTML+= `<li id="card${element._id}" class="cardLi card"> <p> ${element.name}</p> <img class="photo" src=" ${element.imageUrl}"/></li> `;
     if ( favStorage.includes('card'+ element._id)){
       
-      favs.innerHTML += `<li id="card${element._id}" class="cardLi"> <p> ${element.name}</p> <img class="photo" src=" ${element.imageUrl}"/></li> `;
+      favs.innerHTML += `<li id="card${element._id}" class="cardLi card"> <p> ${element.name}</p> <img class="photo" src=" ${element.imageUrl}"/></li> `;
     }
 })};
 
