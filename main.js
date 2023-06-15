@@ -50,6 +50,7 @@ function handleClick(event) {
 function renderList(list){
   charactersList.innerHTML=``;
   favs.innerHTML=``;
+
   list.forEach(element => {
     
     charactersList.innerHTML+= `<li id="card${element._id}" class="cardLi card"> <p> ${element.name}</p> <img class="photo" src=" ${element.imageUrl}"/></li> `;
@@ -57,6 +58,7 @@ function renderList(list){
       
       favs.innerHTML += `<li id="card${element._id}" class="cardLi card"> <p> ${element.name}</p> <img class="photo" src=" ${element.imageUrl}"/></li> `;
     }
+    
 })};
 
 
